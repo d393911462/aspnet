@@ -1,0 +1,11 @@
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/bin/Debug/netcoreapp2.0/aspnet-mysql.deps.json
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/bin/Debug/netcoreapp2.0/aspnet-mysql.runtimeconfig.json
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/bin/Debug/netcoreapp2.0/aspnet-mysql.runtimeconfig.dev.json
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/bin/Debug/netcoreapp2.0/aspnet-mysql.dll
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/bin/Debug/netcoreapp2.0/aspnet-mysql.pdb
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/obj/Debug/netcoreapp2.0/aspnet-mysql.csprojAssemblyReference.cache
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/obj/Debug/netcoreapp2.0/aspnet-mysql.csproj.CoreCompileInputs.cache
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/obj/Debug/netcoreapp2.0/aspnet-mysql.AssemblyInfoInputs.cache
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/obj/Debug/netcoreapp2.0/aspnet-mysql.AssemblyInfo.cs
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/obj/Debug/netcoreapp2.0/aspnet-mysql.dll
+/Users/dengzeyu/Documents/docker/aspnet-mysql/src/aspnet-mysql/obj/Debug/netcoreapp2.0/aspnet-mysql.pdb
