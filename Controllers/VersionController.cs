@@ -12,7 +12,7 @@ namespace aspnetmysql.Controllers
     {
         public string Index()
 		{
-			return "0.0.2";
+			return "0.0.3";
 		}
     }
 }
