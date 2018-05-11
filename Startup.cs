@@ -28,6 +28,7 @@ namespace aspnet_mysql
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
     {
+			var connstr = Configuration.GetConnectionString("Mysql");
 			services.AddDbContext<MyContext>(options => options.UseMySql(Configuration.GetConnectionString("Mysql")));
       
 			services.AddMvc();
@@ -55,7 +56,7 @@ namespace aspnet_mysql
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
-			//await SampleData.InitDB(app.ApplicationServices);
+			await SampleData.InitDB(app.ApplicationServices);
 
         }
     }

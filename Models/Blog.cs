@@ -59,37 +59,42 @@ namespace aspnet_mysql.Models
 			{
 			 	var context = serviceScope.ServiceProvider.GetService<MyContext>();
 				
-				if (context.Database != null )
+				if (context.Database != null&&context.Database.EnsureCreated() )
 				{
-					var str = context.Database.GetDbConnection().ConnectionString;
-				// 	// Init sample data
+					try{
+						var str = context.Database.GetDbConnection().ConnectionString;
+
+					}
+					catch(Exception e)
+					{
+						var e1 = e;
+					}
+				 	// Init sample data
 					var user = new User { Name = "Yuuko" };
-			         //context.Add(user);
-				// 	var blog1 = new Blog
-				// 	{
-				// 		Title = "Title #1",
-				// 		UserId = user.UserId,
-				// 		Tags = new List<string>() { "ASP.NET Core", "MySQL", "Pomelo" }
-				// 	};
-				// 	context.Add(blog1);
-				// 	var blog2 = new Blog
-				// 	{
-				// 		Title = "Title #2",
-				// 		UserId = user.UserId,
-				// 		Tags = new List<string>() { "ASP.NET Core", "MySQL" }
-				// 	};
-				// 	context.Add(blog2);
-				// 	context.SaveChanges();
+			         context.Add(user);
+				 	var blog1 = new Blog
+				 	{
+				 		Title = "Title #1",
+				 		UserId = user.UserId,
+				 		Tags = new List<string>() { "ASP.NET Core", "MySQL", "Pomelo" }
+				 	};
+				 	context.Add(blog1);
+				 	var blog2 = new Blog
+				 	{
+				 		Title = "Title #2",
+				 		UserId = user.UserId,
+				 		Tags = new List<string>() { "ASP.NET Core", "MySQL" }
+				 	};
+				 	context.Add(blog2);
+                    
 
-				// 	// Changing and save json object #1
-				// 	blog1.Tags.Object.Clear();
-				// 	context.SaveChanges();
+				 	// Changing and save json object #1
+				 	blog1.Tags.Object.Clear();
 
-				// 	// Changing and save json object #2
-				// 	blog1.Tags.Object.Add("Pomelo");
-				// 	context.SaveChanges();
+				 	// Changing and save json object #2
+				 	blog1.Tags.Object.Add("Pomelo");
 				}
-				// await context.SaveChangesAsync();
+				 await context.SaveChangesAsync();
 			}
 		}
     }

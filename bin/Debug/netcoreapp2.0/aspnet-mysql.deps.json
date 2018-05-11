@@ -24,6 +24,7 @@
       "aspnet-mysql/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.All": "2.0.8",
+          "Microsoft.EntityFrameworkCore.Tools": "2.0.3",
           "Microsoft.NETCore.App": "2.0.0",
           "Pomelo.EntityFrameworkCore.MySql": "2.0.1"
         },
