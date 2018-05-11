@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using aspnet_mysql.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,7 +13,12 @@ namespace aspnetmysql.Controllers
     {
         public string Index()
 		{
-			return "0.0.4 EF存在异常！需要Windows调试";
+			return "0.0.5";
 		}
+        public string getUserName()
+		{
+			return "AA";
+		}
+
     }
 }
