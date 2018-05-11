@@ -39,6 +39,13 @@ namespace aspnet_mysql.Models
         {
 
         }
+		protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+            // Customize the ASP.NET Identity model and override the defaults if needed.
+            // For example, you can rename the ASP.NET Identity table names and more.
+            // Add your customizations after calling base.OnModelCreating(builder);
+        }
         public DbSet<Blog> Blogs { get; set; }
 
         public DbSet<User> Users { get; set; }
@@ -46,39 +53,44 @@ namespace aspnet_mysql.Models
 
     public class SampleData
     {
-        public async static Task InitDB(IServiceProvider service)
-        {
-            var context = service.GetService<MyContext>();
+		public async static Task InitDB(IServiceProvider service)
+		{
+			using (var serviceScope = service.CreateScope())
+			{
+			 	var context = serviceScope.ServiceProvider.GetService<MyContext>();
+				
+				if (context.Database != null )
+				{
+					var str = context.Database.GetDbConnection().ConnectionString;
+				// 	// Init sample data
+					var user = new User { Name = "Yuuko" };
+			         //context.Add(user);
+				// 	var blog1 = new Blog
+				// 	{
+				// 		Title = "Title #1",
+				// 		UserId = user.UserId,
+				// 		Tags = new List<string>() { "ASP.NET Core", "MySQL", "Pomelo" }
+				// 	};
+				// 	context.Add(blog1);
+				// 	var blog2 = new Blog
+				// 	{
+				// 		Title = "Title #2",
+				// 		UserId = user.UserId,
+				// 		Tags = new List<string>() { "ASP.NET Core", "MySQL" }
+				// 	};
+				// 	context.Add(blog2);
+				// 	context.SaveChanges();
 
-            if (context.Database != null && context.Database.EnsureCreated())
-            {
-                // Init sample data
-                var user = new User { Name = "Yuuko" };
-                context.Add(user);
-                var blog1 = new Blog {
-                    Title = "Title #1",
-                    UserId = user.UserId,
-                    Tags = new List<string>() { "ASP.NET Core", "MySQL", "Pomelo" }
-                };
-                context.Add(blog1);
-                var blog2 = new Blog
-                {
-                    Title = "Title #2",
-                    UserId = user.UserId,
-                    Tags = new List<string>() { "ASP.NET Core", "MySQL" }
-                };
-                context.Add(blog2);
-                context.SaveChanges();
+				// 	// Changing and save json object #1
+				// 	blog1.Tags.Object.Clear();
+				// 	context.SaveChanges();
 
-                // Changing and save json object #1
-                blog1.Tags.Object.Clear();
-                context.SaveChanges();
-
-                // Changing and save json object #2
-                blog1.Tags.Object.Add("Pomelo");
-                context.SaveChanges();
-            }
-            await context.SaveChangesAsync();
-        }
+				// 	// Changing and save json object #2
+				// 	blog1.Tags.Object.Add("Pomelo");
+				// 	context.SaveChanges();
+				}
+				// await context.SaveChangesAsync();
+			}
+		}
     }
 }

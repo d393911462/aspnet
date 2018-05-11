@@ -28,15 +28,15 @@ namespace aspnet_mysql
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
     {
-        services.AddDbContext<ApplicationDbContext>(options => options.UseMySql(Configuration.GetConnectionString("Mysql")));
-      services.AddMvc();
+			services.AddDbContext<MyContext>(options => options.UseMySql(Configuration.GetConnectionString("Mysql")));
+      
+			services.AddMvc();
      
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-    public  void Configure(IApplicationBuilder app, IHostingEnvironment env)
+		public async void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-        //await SampleData.InitDB(app.ApplicationServices);
 
             if (env.IsDevelopment())
             {
@@ -55,6 +55,7 @@ namespace aspnet_mysql
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+			//await SampleData.InitDB(app.ApplicationServices);
 
         }
     }

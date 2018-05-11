@@ -2670,6 +2670,15 @@
           }
         }
       },
+      "MySql.Data.Entity/6.10.7": {
+        "type": "package",
+        "compile": {
+          "lib/net452/MySql.Data.Entity.EF6.dll": {}
+        },
+        "runtime": {
+          "lib/net452/MySql.Data.Entity.EF6.dll": {}
+        }
+      },
       "MySqlConnector/0.32.0": {
         "type": "package",
         "dependencies": {
@@ -7628,6 +7637,21 @@
         "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "MySql.Data.Entity/6.10.7": {
+      "sha512": "uMea0lkSjGFInqCxB5QWzP0TxvRSN00cA1WSRCm2SnsU2JnNOXqe5WVeIa2xd1Ni2EqSW+CDYN7W/LSMT38fsA==",
+      "type": "package",
+      "path": "mysql.data.entity/6.10.7",
+      "files": [
+        "content/app.config.transform",
+        "content/web.config.transform",
+        "contentFiles/any/net452/app.config.transform",
+        "contentFiles/any/net452/web.config.transform",
+        "lib/net452/MySql.Data.Entity.EF6.dll",
+        "lib/net452/MySql.Data.Entity.EF6.xml",
+        "mysql.data.entity.6.10.7.nupkg.sha512",
+        "mysql.data.entity.nuspec"
       ]
     },
     "MySqlConnector/0.32.0": {
@@ -12906,6 +12930,7 @@
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.NETCore.App >= 2.0.0",
+      "MySql.Data.Entity >= 6.10.7",
       "Pomelo.EntityFrameworkCore.MySql >= 2.0.1"
     ]
   },
@@ -12961,6 +12986,10 @@
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
             "version": "2.0.1"
+          },
+          "MySql.Data.Entity": {
+            "target": "Package",
+            "version": "6.10.7"
           }
         },
         "imports": [
@@ -12970,5 +12999,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'MySql.Data.Entity 6.10.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "MySql.Data.Entity",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }

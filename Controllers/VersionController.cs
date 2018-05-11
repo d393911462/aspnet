@@ -12,7 +12,7 @@ namespace aspnetmysql.Controllers
     {
         public string Index()
 		{
-			return "0.0.3";
+			return "0.0.4 EF存在异常！需要Windows调试";
 		}
     }
 }
