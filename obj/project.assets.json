@@ -12921,13 +12921,13 @@
       "projectName": "aspnet-mysql",
       "projectPath": "/Users/dengzeyu/aspnetproject/aspnet/aspnet-mysql.csproj",
       "packagesPath": "/Users/dengzeyu/.nuget/packages/",
-      "outputPath": "/Users/dengzeyu/aspnetproject/aspnet/obj",
+      "outputPath": "/Users/dengzeyu/aspnetproject/aspnet/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/dengzeyu/.config/NuGet/NuGet.Config"
+        "/Users/dengzeyu/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -12949,23 +12949,22 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "Microsoft.NETCore.App": {
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "2.0",
-            "autoReferenced": true
-          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
-            "version": "2.0.8"
-          },
-          "Pomelo.EntityFrameworkCore.MySql": {
-            "target": "Package",
-            "version": "2.0.1"
+            "version": "[2.0.8, )"
           },
           "Microsoft.EntityFrameworkCore.Tools": {
             "target": "Package",
-            "version": "2.0.3"
+            "version": "[2.0.3, )"
+          },
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[2.0.0, )",
+            "autoReferenced": true
+          },
+          "Pomelo.EntityFrameworkCore.MySql": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           }
         },
         "imports": [
