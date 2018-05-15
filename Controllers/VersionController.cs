@@ -23,7 +23,7 @@ namespace aspnetmysql.Controllers
 		}
         public string Index()
 		{
-			return "0.0.8";
+			return "0.0.10";
 		}
         public string getUserName()
 		{

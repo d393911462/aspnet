@@ -1,20 +1,20 @@
 version: '2'
 services:
-   db:
-     image: mysql
-     restart: always
-     environment:
-       MYSQL_ROOT_PASSWORD: dqx930215115
-       MYSQL_DATABASE: ef
-       MYSQL_USER: ef
-       MYSQL_PASSWORD: dqx930215115
+  #  db:
+  #    image: mysql
+  #    restart: always
+  #    environment:
+  #      MYSQL_ROOT_PASSWORD: dqx930215115
+  #      MYSQL_DATABASE: ef
+  #      MYSQL_USER: ef
+  #      MYSQL_PASSWORD: dqx930215115
 
    web:
      build: .
-     depends_on:
-       - db
-     links:
-       - db
+    #  depends_on:
+    #    - db
+    #  links:
+    #    - db
      ports:
        - "5000:5000"
      restart: always
