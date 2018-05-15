@@ -28,7 +28,6 @@ namespace aspnetmysql.Controllers
         public string getUserName()
 		{
 			return _Context.Users.Find(1).Name;
-			
 		}
 	}
  
