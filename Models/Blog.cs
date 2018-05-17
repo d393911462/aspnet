@@ -14,6 +14,8 @@ namespace aspnet_mysql.Models
 
         [MaxLength(64)]
         public string Name { get; set; }
+
+		public virtual List<Blog> Blog { get; set; }
     }
 
     public class Blog

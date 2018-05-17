@@ -10,24 +10,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace aspnetmysql.Controllers
 {
-    public class VersionController : Controller
-    {
-    //      static string connection = @"Server=cd-cdb-2b19h0iv.sql.tencentcdb.com;Port=63990;database=ef;uid=root;pwd=dqx930215115;";
-    //     static DbContextOptions<MyContext> dbContextOption = new DbContextOptions<MyContext>();
-    //     static DbContextOptionsBuilder<MyContext> dbContextOptionBuilder = new DbContextOptionsBuilder<MyContext>(dbContextOption);
-       MyContext _Context;
-	    // = new MyContext(dbContextOptionBuilder.UseSqlServer(connection).Options);
+	public class VersionController : Controller
+	{
+		//      static string connection = @"Server=cd-cdb-2b19h0iv.sql.tencentcdb.com;Port=63990;database=ef;uid=root;pwd=dqx930215115;";
+		//     static DbContextOptions<MyContext> dbContextOption = new DbContextOptions<MyContext>();
+		//     static DbContextOptionsBuilder<MyContext> dbContextOptionBuilder = new DbContextOptionsBuilder<MyContext>(dbContextOption);
+		MyContext _Context;
+		// = new MyContext(dbContextOptionBuilder.UseSqlServer(connection).Options);
 		public VersionController(MyContext context)
 		{
 			_Context = context;
 		}
-        public string Index()
+		public string Index() => "0.0.11";
+		public string getUserName()
 		{
-			return "0.0.10";
-		}
-        public string getUserName()
-		{
-			return _Context.Users.Find(1).Name;
+			return _Context.Users.Where(User => User.Name == "邓泽宇").ToList()[0].Name;
 		}
 	}
  

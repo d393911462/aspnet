@@ -19,4 +19,4 @@
 /Users/dengzeyu/aspnetproject/aspnet/obj/Debug/netcoreapp2.0/aspnet-mysql.AssemblyInfo.cs
 /Users/dengzeyu/aspnetproject/aspnet/obj/Debug/netcoreapp2.0/aspnet-mysql.dll
 /Users/dengzeyu/aspnetproject/aspnet/obj/Debug/netcoreapp2.0/aspnet-mysql.pdb
-/Users/dengzeyu/aspnetproject/aspnet/obj/Debug/netcoreapp2.0/aspnet-mysql.csprojAssemblyReference.cache
+/Users/dengzeyu/aspnetproject/aspnet/obj/Debug/netcoreapp2.0/aspnet-mysql.csprojResolveAssemblyReference.cache
