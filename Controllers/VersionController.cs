@@ -21,7 +21,7 @@ namespace aspnetmysql.Controllers
 		{
 			_Context = context;
 		}
-		public string Index() => "0.0.11";
+		public string Index() => "0.0.12";
 		public string getUserName()
 		{
 			return _Context.Users.Where(User => User.Name == "邓泽宇").ToList()[0].Name;
