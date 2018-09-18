@@ -1,18 +1,21 @@
 ﻿<Properties StartupConfiguration="{255F4947-17DA-4B18-94A9-5A651A01A51E}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Blog.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="log4net.config">
     <Files>
-      <File FileName="Controllers/VersionController.cs" Line="20" Column="16" />
-      <File FileName="Startup.cs" Line="59" Column="1" />
+      <File FileName="Controllers/VersionController.cs" Line="27" Column="5" />
+      <File FileName="Startup.cs" Line="30" Column="71" />
       <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="Controllers/HomeController.cs" Line="20" Column="29" />
+      <File FileName="Controllers/HomeController.cs" Line="39" Column="10" />
       <File FileName="appsettings.json" Line="11" Column="1" />
-      <File FileName="Models/Blog.cs" Line="24" Column="1" />
+      <File FileName="Models/Blog.cs" Line="54" Column="6" />
       <File FileName="ApplicationDbContext.cs" Line="1" Column="1" />
       <File FileName="bundleconfig.json" Line="1" Column="1" />
       <File FileName="appsettings.Development.json" Line="12" Column="24" />
       <File FileName="Models/ErrorViewModel.cs" Line="1" Column="1" />
       <File FileName="Dockerfile" Line="1" Column="1" />
       <File FileName="aspnet-mysql.csproj" Line="1" Column="1" />
+      <File FileName="log4net.config" Line="32" Column="38" />
+      <File FileName="logfile/20180518.log" Line="1" Column="1" />
+      <File FileName="docker-compose.yml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.ItemProperties.aspnet-mysql PreferredExecutionTarget="MonoDevelop.Default" />

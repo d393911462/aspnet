@@ -8,11 +8,16 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using aspnet_mysql.Models;
+using log4net.Repository;
+using log4net;
+using System.IO;
 
 namespace aspnet_mysql
 {
     public class Startup
     {
+		public static ILoggerRepository repository { get; set; }
+
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
@@ -21,6 +26,8 @@ namespace aspnet_mysql
                 .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
                 .AddEnvironmentVariables();
             Configuration = builder.Build();
+			repository = LogManager.CreateRepository("NETCoreRepository");
+			log4net.Config.XmlConfigurator.Configure(repository, new FileInfo("log4net.config"));
         }
 
         public IConfiguration Configuration { get; }

@@ -5,13 +5,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using aspnet_mysql.Models;
+using log4net;
 
 namespace aspnet_mysql.Controllers
 {
     public class HomeController : Controller
     {
+		private ILog log = LogManager.GetLogger(Startup.repository.Name, typeof(HomeController));
+
         public IActionResult Index()
         {
+			log.Info("test");
             return View();
         }
 
